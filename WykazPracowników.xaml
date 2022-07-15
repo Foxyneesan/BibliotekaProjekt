@@ -5,10 +5,78 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:BibliotekaProjekt"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="350" d:DesignWidth="500"
       Title="WykazPracowników">
 
     <Grid>
-        
+
+        <Grid.Background>
+            <ImageBrush ImageSource="picture.jpg" />
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="230" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Label Grid.Column="1" Style="{StaticResource headerTextStyle}">
+            Tabela pracowników
+        </Label>
+        <Grid Margin="10" Grid.Column="1" Grid.Row="1">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Grid.Resources>
+
+                <!-- Godzina Rozpoczęcia Pracy -->
+                <DataTemplate x:Key="godzinaRozpoczęcia">
+                    <Label Content="{Binding XPath=@GodzinaRozpoczęcia}"/>
+                </DataTemplate>
+                <!-- Godzina Zakończenia Pracy -->
+                <DataTemplate x:Key="godzinaZakończenia">
+                    <Label Content="{Binding XPath=@GodzinaZakończenia}"/>
+                </DataTemplate>
+
+
+            </Grid.Resources>
+
+            <!-- Pracownik -->
+            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Orientation="Horizontal">
+                <Label Style="{StaticResource labelStyle}">Pracownik:</Label>
+                <Label Style="{StaticResource labelStyle}" Content="{Binding XPath=@Pracownik}"></Label>
+            </StackPanel>
+
+            <!-- Data Rozpoczęcia Pracy -->
+            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Orientation="Horizontal">
+                <Label Style="{StaticResource labelStyle}">Data Rozpoczęcia Pracy:</Label>
+                <Label Style="{StaticResource labelStyle}" Content="{Binding XPath=@DataRozpoczęciaPracy}"></Label>
+            </StackPanel>
+
+            <Grid Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" VerticalAlignment="Top" 
+           HorizontalAlignment="Left">
+
+                <!-- Tabela wypożyczeń -->
+                <DataGrid ItemsSource="{Binding XPath=Wynik}" ColumnHeaderStyle="{StaticResource columnHeaderStyle}" AutoGenerateColumns="False" RowHeaderWidth="0" >
+
+                    <DataGrid.Columns>
+                        <DataGridTemplateColumn Header="Godzina Rozp." CellTemplate="{StaticResource godzinaRozpoczęcia}" />
+                        <DataGridTemplateColumn Header="Godzina Zak." CellTemplate="{StaticResource godzinaZakończenia}" />
+                    </DataGrid.Columns>
+
+                </DataGrid>
+
+            </Grid>
+        </Grid>
     </Grid>
 </Page>

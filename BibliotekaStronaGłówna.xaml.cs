@@ -28,7 +28,7 @@ namespace BibliotekaProjekt
         {
 
 
-            string selectedType = "Użytkownicy";
+            string selectedType = "Pracownicy";
             
 
             switch (selectedType)

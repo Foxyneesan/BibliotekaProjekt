@@ -24,5 +24,11 @@ namespace BibliotekaProjekt
         {
             InitializeComponent();
         }
+
+        public WykazPracowników(object data) : this()
+        {
+            // Bind to expense report data.
+            this.DataContext = data;
+        }
     }
 }

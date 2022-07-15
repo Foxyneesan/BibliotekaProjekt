@@ -24,5 +24,12 @@ namespace BibliotekaProjekt
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            // Zobacz Wykaz Książek
+            WykazPracowników wykazPracowników = new WykazPracowników(this.listaPracowników.SelectedItem);
+            this.NavigationService.Navigate(wykazPracowników);
+        }
     }
 }

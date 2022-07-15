@@ -72,7 +72,7 @@
 
                     <DataGrid.Columns>
                         <DataGridTemplateColumn Header="Użytkownik" CellTemplate="{StaticResource użytkownik}" />
-                        <DataGridTemplateColumn Header="DataWypożyczenia" CellTemplate="{StaticResource dataWypożyczenia}" />
+                        <DataGridTemplateColumn Header="Data Wypożyczenia" CellTemplate="{StaticResource dataWypożyczenia}" />
                     </DataGrid.Columns>
 
                 </DataGrid>
