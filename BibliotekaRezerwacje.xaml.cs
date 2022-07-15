@@ -24,5 +24,12 @@ namespace BibliotekaProjekt
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            // Zobacz Wykaz Książek
+            WykazRezerwacji wykazRezerwacji = new WykazRezerwacji(this.listaRezerwacji.SelectedItem);
+            this.NavigationService.Navigate(wykazRezerwacji);
+        }
     }
 }
