@@ -25,11 +25,11 @@ namespace BibliotekaProjekt
             InitializeComponent();
         }
         private void Button_Click(object sender, RoutedEventArgs e)
+
+
         {
-
-
-            string selectedType = "Pracownicy";
-            
+            ListBoxItem item = (ListBoxItem)menuListBox.ItemContainerGenerator.ContainerFromIndex(menuListBox.SelectedIndex);
+            string selectedType = item.Content.ToString();
 
             switch (selectedType)
             {

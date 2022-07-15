@@ -31,14 +31,14 @@
             <Label Style="{StaticResource listHeaderTextStyle}">Menu</Label>
         </Border>
         
-        <ListBox Name="menuListBox" Grid.Column="0" Grid.Row="2">
+     <ListBox Name="menuListBox" Grid.Column="0" Grid.Row="2">
             <ListBoxItem>Książki</ListBoxItem>
             <ListBoxItem>Rezerwacje</ListBoxItem>
             <ListBoxItem>Użytkownicy</ListBoxItem>
             <ListBoxItem>Pracownicy</ListBoxItem>
-        </ListBox>
+            </ListBox>
 
-        <!-- Przycisk -->
+            <!-- Przycisk -->
         <Button Grid.Column="0" Grid.Row="3" Style="{StaticResource buttonStyle}" Click="Button_Click">Przejdź</Button>
 
         <Grid.Background>
