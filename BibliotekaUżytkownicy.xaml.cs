@@ -24,5 +24,13 @@ namespace BibliotekaProjekt
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            // Zobacz Wykaz Książek
+            WykazUżytkowników wykazUżytkowników = new WykazUżytkowników(this.listaUżytkowników.SelectedItem);
+            this.NavigationService.Navigate(wykazUżytkowników);
+        }
+
     }
 }

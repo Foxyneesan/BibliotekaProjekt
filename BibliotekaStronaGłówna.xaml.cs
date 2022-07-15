@@ -23,14 +23,13 @@ namespace BibliotekaProjekt
         public BibliotekaStronaGłówna()
         {
             InitializeComponent();
-
-           
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
+
+            string selectedType = "Użytkownicy";
             
-            string selectedType = "Rezerwacje";
 
             switch (selectedType)
             {
@@ -41,6 +40,14 @@ namespace BibliotekaProjekt
                 case "Rezerwacje":
                     BibliotekaRezerwacje rezerwacje = new BibliotekaRezerwacje();
                     this.NavigationService.Navigate(rezerwacje);
+                    break;
+                case "Użytkownicy":
+                    BibliotekaUżytkownicy użytkownicy = new BibliotekaUżytkownicy();
+                    this.NavigationService.Navigate(użytkownicy);
+                    break;
+                case "Pracownicy":
+                    BibliotekaPracownicy pracownicy = new BibliotekaPracownicy();
+                    this.NavigationService.Navigate(pracownicy);
                     break;
                 default:
                     break;
