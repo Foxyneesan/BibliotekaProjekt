@@ -24,5 +24,11 @@ namespace BibliotekaProjekt
         {
             InitializeComponent();
         }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            // Zobacz Wykaz Książek
+           WykazKsiążek wykazKsiążek = new WykazKsiążek(this.listaGatunków.SelectedItem);
+            this.NavigationService.Navigate(wykazKsiążek);
+        }
     }
 }

@@ -24,5 +24,10 @@ namespace BibliotekaProjekt
         {
             InitializeComponent();
         }
+        public WykazKsiążek(object data) : this()
+        {
+            // Bind to expense report data.
+            this.DataContext = data;
+        }
     }
 }

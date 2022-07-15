@@ -24,5 +24,11 @@ namespace BibliotekaProjekt
         {
             InitializeComponent();
         }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            // View Expense Report
+            BibliotekaKsiążki bibliotekaKsiążki = new BibliotekaKsiążki();
+            this.NavigationService.Navigate(bibliotekaKsiążki);
+        }
     }
 }
