@@ -23,12 +23,33 @@ namespace BibliotekaProjekt
         public BibliotekaStronaGłówna()
         {
             InitializeComponent();
+
+           
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            // View Expense Report
-            BibliotekaKsiążki bibliotekaKsiążki = new BibliotekaKsiążki();
-            this.NavigationService.Navigate(bibliotekaKsiążki);
+
+            
+            string selectedType = "Rezerwacje";
+
+            switch (selectedType)
+            {
+                case "Książki":
+                    BibliotekaKsiążki książka = new BibliotekaKsiążki();
+                    this.NavigationService.Navigate(książka);
+                    break;
+                case "Rezerwacje":
+                    BibliotekaRezerwacje rezerwacje = new BibliotekaRezerwacje();
+                    this.NavigationService.Navigate(rezerwacje);
+                    break;
+                default:
+                    break;
+            }
+
         }
+
+      
+
     }
+
 }
