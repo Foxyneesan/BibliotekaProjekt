@@ -25,28 +25,28 @@
 
         <Grid.Resources>
         <!-- Nazwa gatunku -->
-        <DataTemplate x:Key="gatunekNazwa">
-            <Label Content="{Binding XPath=@Gatunek}"/>
+        <DataTemplate x:Key="książkiNazwa">
+            <Label Content="{Binding XPath=@Tytuł}"/>
         </DataTemplate>
 
             <!-- Wykaz Książek -->
             <XmlDataProvider x:Key="WykazKsiążek" XPath="Książki">
                 <x:XData>
                     <Książki xmlns="">
-                        <Książka Gatunek="Fantastyka" Tytuł="No game no life">
+                        <Książka Tytuł="No game no life" Gatunek="Fantastyka" >
                             <Wynik Użytkownik="Filip Ostrowski" DataWypożyczenia="01-07-2022" />
                             <Wynik Użytkownik="Roman Sadowska" DataWypożyczenia="08-07-2022" />
                         </Książka>
-                        <Książka Gatunek="Horror" Tytuł="Mieruko-chan">
+                        <Książka Tytuł="Mieruko-chan" Gatunek="Horror" >
                             <Wynik Użytkownik="Marcela Brzezińska" DataWypożyczenia="03-07-2022" />
                             <Wynik Użytkownik="Gniewomir Jankowski" DataWypożyczenia="10-07-2022" />
                             <Wynik Użytkownik="Roman Sadowska" DataWypożyczenia="08-07-2022" />
                         </Książka>
-                        <Książka Gatunek="Komedia" Tytuł="Projekt:cosplay">
+                        <Książka Tytuł="Projekt:cosplay" Gatunek="Komedia" >
                             <Wynik Użytkownik="Gniewomir Jankowski" DataWypożyczenia="10-07-2022" />
                             <Wynik Użytkownik="Filip Ostrowski" DataWypożyczenia="01-07-2022" />
                         </Książka>
-                        <Książka Gatunek="Romans" Tytuł="Noragami">
+                        <Książka Tytuł="Noragami" Gatunek="Romans" >
                             <Wynik Użytkownik="Filip Ostrowski" DataWypożyczenia="01-07-2022" />
                         </Książka>
                     </Książki>
@@ -55,17 +55,17 @@
 
         </Grid.Resources>
 
-        <!-- Lista gatunków -->
+        <!-- Lista książek -->
 
         <Label Grid.Column="1" Style="{StaticResource headerTextStyle}">
-            Zobacz gatunki książek
+            Zobacz książki
         </Label>
         <Border Grid.Column="1" Grid.Row="1" Style="{StaticResource listHeaderStyle}">
-            <Label VerticalAlignment="Center" Foreground="White">Gatunki</Label>
+            <Label VerticalAlignment="Center" Foreground="White">Książki</Label>
         </Border>
-        <ListBox Name="listaGatunków" Grid.Column="1" Grid.Row="2" 
+        <ListBox Name="listaKsiążek" Grid.Column="1" Grid.Row="2" 
          ItemsSource="{Binding Source={StaticResource WykazKsiążek}, XPath=Książka}"
-         ItemTemplate="{StaticResource gatunekNazwa}">
+         ItemTemplate="{StaticResource książkiNazwa}">
         </ListBox>
 
         <!-- View report button -->

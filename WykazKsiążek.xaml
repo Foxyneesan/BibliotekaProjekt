@@ -50,17 +50,19 @@
 
             </Grid.Resources>
 
+            <!-- Tytuł -->
+            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Orientation="Horizontal">
+                <Label Style="{StaticResource labelStyle}">Tytuł:</Label>
+                <Label Style="{StaticResource labelStyle}" Content="{Binding XPath=@Tytuł}"></Label>
+            </StackPanel>
+
             <!-- Gatunek -->
-        <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Orientation="Horizontal">
+        <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Orientation="Horizontal">
                 <Label Style="{StaticResource labelStyle}">Gatunek:</Label>
                 <Label Style="{StaticResource labelStyle}" Content="{Binding XPath=@Gatunek}"></Label>
         </StackPanel>
 
-        <!-- Tytuł -->
-        <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Orientation="Horizontal">
-                <Label Style="{StaticResource labelStyle}">Tytuł:</Label>
-                <Label Style="{StaticResource labelStyle}" Content="{Binding XPath=@Tytuł}"></Label>
-        </StackPanel>
+        
 
             <Grid Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" VerticalAlignment="Top" 
            HorizontalAlignment="Left">
